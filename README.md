@@ -19,30 +19,6 @@ L’analyse porte sur **SPY**, **SPEM**, **SPIB** et **SPHY**, représentant res
 
 Les écarts augmentent dans les régimes de forte volatilité, notamment pour SPEM (**0,3752 % → 0,8283 %**). Parmi les écarts importants, une diminution est observée dès la séance suivante dans **65,22 % à 100 %** des cas selon l’ETF, avec une prudence particulière pour SPY, dont le résultat ne repose que sur 11 observations.
 
-## Méthodologie
-
-1. Téléchargement et nettoyage des historiques de NAV publiés par State Street Global Advisors.
-2. Téléchargement des prix de clôture et des volumes via Yahoo Finance.
-3. Fusion des observations communes entre NAV et prix de marché.
-4. Calcul de la prime/décote :
-
-   \[
-   \mathrm{Prime/Décote}_t = \frac{P^{marché}_t - NAV_t}{NAV_t} \times 100
-   \]
-
-5. Comparaison des écarts selon des régimes de VIX et des quartiles de volume propres à chaque ETF.
-6. Mesure de la correction le jour suivant pour les écarts absolus supérieurs ou égaux à 0,25 %.
-
-## Structure
-
-```text
-.
-├── notebooks/
-│   └── etf_nav_market_price_analysis.ipynb
-├── requirements.txt
-└── README.md
-```
-
 ## Reproduire l’analyse
 
 ```bash
@@ -67,5 +43,3 @@ Le notebook télécharge les données au moment de l’exécution ; aucun fichie
 - Volatilité : indice VIX téléchargé via Yahoo Finance
 
 La NAV et le cours de clôture peuvent correspondre à des horaires ou conventions de valorisation différents. Le volume est un proxy imparfait de la liquidité et l’analyse décrit des associations, sans établir de causalité.
-
-> Projet académique réalisé dans le cadre du cursus Python de l’ENSAE Paris. Ce dépôt ne constitue pas un conseil en investissement.
