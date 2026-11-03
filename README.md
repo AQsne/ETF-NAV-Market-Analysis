@@ -19,23 +19,6 @@ L’analyse porte sur **SPY**, **SPEM**, **SPIB** et **SPHY**, représentant res
 
 Les écarts augmentent dans les régimes de forte volatilité, notamment pour SPEM (**0,3752 % → 0,8283 %**). Parmi les écarts importants, une diminution est observée dès la séance suivante dans **65,22 % à 100 %** des cas selon l’ETF, avec une prudence particulière pour SPY, dont le résultat ne repose que sur 11 observations.
 
-## Reproduire l’analyse
-
-```bash
-python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-
-# macOS / Linux
-source .venv/bin/activate
-
-pip install -r requirements.txt
-jupyter notebook notebooks/etf_nav_market_price_analysis.ipynb
-```
-
-Le notebook télécharge les données au moment de l’exécution ; aucun fichier de données propriétaire ou volumineux n’est stocké dans le dépôt. Les résultats présentés ci-dessus correspondent à la dernière exécution du notebook et peuvent évoluer lorsque les fournisseurs mettent à jour leurs historiques.
-
 ## Sources et limites
 
 - NAV : [State Street Global Advisors — ETF fund data](https://www.ssga.com/us/en/intermediary/etfs/resources/fund-data)
